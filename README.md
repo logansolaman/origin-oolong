@@ -66,4 +66,4 @@ No path changes are needed: the site uses relative links throughout, so it works
 
 ## Design
 
-Paper `#F1F2EE`, ink `#0F1210`, body `#333A34`, accent `#8C4A12`. Geist for display, Geist Mono for all figures, loaded from Google Fonts. One light theme, hairlines instead of cards, no images.
+Paper `#F1F2EE`, ink `#0F1210`, body `#333A34`, accent `#8F520C`. Geist for display, Geist Mono for all figures, loaded from Google Fonts. One light theme, hairlines instead of cards, no images.
