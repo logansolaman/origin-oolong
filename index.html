@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">
 {
@@ -99,240 +99,281 @@
 
 <main>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
+  <!-- HERO: DOCUMENTED OOLONG OR NOTHING -->
+  <section class="hero-cert">
+    <div class="wrap hero-cert-grid">
+      <div class="hero-cert-copy">
         <p class="kicker">Oolong trade, one origin</p>
-        <h1>Oolong from one farm, sold as a documented lot.</h1>
+        <h1 class="hero-cert-title">Documented<br>Oolong<br>Or Nothing</h1>
         <p class="lede">Zhangping shuixian grown, made and packed under a named tea master. Wholesale leaf, private label and aged lots, shipped from Hong Kong.</p>
         <div class="hero-cta">
           <a class="btn" href="contact.html">Request a sample kit</a>
           <a class="btn btn-ghost" href="wholesale.html">See the price ladder</a>
         </div>
       </div>
-
-      <aside class="lot" aria-label="Current lot summary">
-        <div class="lot-hd">
-          <span class="t">Current lot</span>
-          <span class="id">ZP-SX-2026-03</span>
+      <div class="hero-cert-visual" aria-hidden="true">
+        <div class="poly-spin">
+        <svg class="polyhedron" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="poly-draw">
+            <path class="poly-edge" d="M160 32 L268 108 L236 248 L84 248 L52 108 Z" stroke="currentColor" stroke-width="1.4"/>
+            <path class="poly-edge" d="M160 32 L160 140 M52 108 L160 140 M268 108 L160 140 M84 248 L160 140 M236 248 L160 140" stroke="currentColor" stroke-width="1" opacity=".5"/>
+            <path class="poly-edge" d="M160 140 L236 248 M160 140 L84 248" stroke="currentColor" stroke-width="1" opacity=".35"/>
+            <path class="poly-edge" d="M52 108 L236 248 M268 108 L84 248" stroke="currentColor" stroke-width=".9" opacity=".28"/>
+            <circle cx="160" cy="32" r="3.5" fill="currentColor"/>
+            <circle cx="52" cy="108" r="3" fill="currentColor" opacity=".7"/>
+            <circle cx="268" cy="108" r="3" fill="currentColor" opacity=".7"/>
+            <circle cx="84" cy="248" r="3" fill="currentColor" opacity=".7"/>
+            <circle cx="236" cy="248" r="3" fill="currentColor" opacity=".7"/>
+            <circle cx="160" cy="140" r="3.2" fill="var(--accent)"/>
+          </g>
+        </svg>
         </div>
-        <dl>
-          <dt>Cultivar</dt><dd>Shuixian 水仙</dd>
-          <dt>Origin</dt><dd>Yongfu, Zhangping</dd>
-          <dt>Pick</dt><dd>Spring 2026</dd>
-          <dt>Oxidation</dt><dd>28 percent</dd>
-          <dt>Roast</dt><dd>Light charcoal</dd>
-          <dt>Moisture</dt><dd>5.4 percent</dd>
-          <dt>Fannings</dt><dd>Under 1 percent</dd>
-          <dt>Available</dt><dd>1,840 kg</dd>
-        </dl>
-        <div class="lot-ft">Residue panel and retained reference sample issued with the lot.</div>
-      </aside>
+      </div>
     </div>
+    <!-- rotating wireframe lives on GPU layer, no JS -->
   </section>
 
-  <!-- FACT STRIP -->
-  <div class="strip">
-    <div class="wrap strip-in">
-      <span class="strip-item"><b>Zero</b> EU duty, heading 0902</span>
-      <span class="strip-item"><b>10 kg</b> wholesale minimum</span>
-      <span class="strip-item"><b>500 units</b> private label</span>
-      <span class="strip-item"><b>EU + UK</b> label pack</span>
-      <span class="strip-item"><b>48 h</b> sample dispatch</span>
-    </div>
-  </div>
+  <!-- STICKY RAIL + CONTENT WRAPPER -->
+  <div class="wrap page-rail-wrap">
+    <aside class="page-rail" aria-hidden="true">
+      <span class="rail-code" id="railLot"></span>
+      <span class="rail-label">LOT</span>
+    </aside>
+    <div class="page-main">
 
-  <!-- THREE LINES OF BUSINESS -->
-  <section>
-    <div class="wrap">
-      <div class="sec-hd">
-        <h2>Three ways to buy the same leaf.</h2>
-        <p class="lede">One farm, one harvest calendar, three commercial formats. Pick the one that matches how you sell.</p>
-      </div>
-      <div class="bento bento-3">
-        <div class="cell cell-a">
-          <span class="figure">10 kg<span>Entry point for wholesale leaf</span></span>
-          <h3>Wholesale leaf</h3>
-          <p>Sealed 5 kg foil-lined cartons of a single lot, with the spec sheet, the residue panel and a retained reference sample. Reorder against the same lot code so your blend does not move.</p>
-          <ul class="list">
-            <li>Tiered pricing from 10 kg to full pallet</li>
-            <li>Reference sample held for 24 months</li>
-            <li>FOB Xiamen or delivered to your warehouse</li>
-          </ul>
-          <dl class="mini">
-            <dt>Lead time</dt><dd>3 to 4 weeks from lot reservation</dd>
-            <dt>Packing</dt><dd>5 kg foil-lined carton</dd>
-            <dt>Payment</dt><dd>50 percent with order, balance against documents</dd>
-            <dt>Incoterm</dt><dd>FOB Xiamen, CIF on request</dd>
-          </dl>
-          <a class="link" href="wholesale.html">Wholesale terms</a>
-        </div>
-        <div class="cell cell-tint">
-          <span class="figure">500<span>Units per private label run</span></span>
-          <h3>Private label</h3>
-          <p>Your artwork, your barcode, your market's label law. We handle the EU and UK label pack, including the importer block.</p>
-          <a class="link" href="private-label.html">Private label programme</a>
-        </div>
-        <div class="cell">
-          <span class="figure">Vintage<span>Aged lots, held in bond-free storage</span></span>
-          <h3>Aged and vintage lots</h3>
-          <p>Roasted oolong improves with rest. We hold small parcels from earlier seasons and release them by year, with the original lot sheet attached.</p>
-          <a class="link" href="oolong.html">See the range</a>
+      <!-- FACT STRIP -->
+      <div class="strip">
+        <div class="strip-in">
+          <span class="strip-item"><b>Zero</b> EU duty, heading 0902</span>
+          <span class="strip-item"><b>10 kg</b> wholesale minimum</span>
+          <span class="strip-item"><b>500 units</b> private label</span>
+          <span class="strip-item"><b>EU + UK</b> label pack</span>
+          <span class="strip-item"><b>48 h</b> sample dispatch</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- LOT SHEET ANATOMY -->
-  <section class="band rule-top">
-    <div class="wrap">
-      <div class="sec-hd">
-        <p class="kicker">Documentation</p>
-        <h2>What arrives with a lot.</h2>
-        <p class="lede">Oolong has no commodity benchmark and no ISO chemical standard. A buyer cannot check a price against an index, so the only thing that makes it a reorderable SKU is the paperwork. This is the packet, sent as one PDF before you commit.</p>
-      </div>
-      <div class="doc">
-        <div class="doc-hd">
-          <span class="t">Lot documentation pack</span>
-          <span class="mono">One lot, one PDF</span>
+      <!-- MORPHING SPEC CARDS: the lot-documentation pack -->
+      <section class="rule-top" data-lot="ZP-SX-2026-01">
+        <div class="sec-hd">
+          <p class="kicker">Documentation</p>
+          <h2>The lot pack, in eight certificates.</h2>
+          <p class="lede">Oolong has no commodity benchmark. A buyer cannot check a price against an index, so the only thing that makes it a reorderable SKU is the paperwork. Hover a card to see the spec it certifies.</p>
         </div>
-        <div class="doc-body">
-          <div><dt>Lot code</dt><dd>Farm, cultivar, year, sequence. Printed on every carton and quoted on every invoice.</dd></div>
-          <div><dt>Product standard</dt><dd>GB/T 30357.4-2015 for shuixian, with the official English title cited.</dd></div>
-          <div><dt>Process record</dt><dd>Oxidation percentage, roast level and date, resting period, moisture at packing.</dd></div>
-          <div><dt>Physical analysis</dt><dd>Stem content, broken leaf, fannings and dust percentage, leaf uniformity.</dd></div>
-          <div><dt>Residue panel</dt><dd>Multi-residue screen against EU maximum residue levels, issued against the lot number.</dd></div>
-          <div><dt>Export filings</dt><dd>Producer and plantation registrations held with the Chinese customs authority, copies on request.</dd></div>
-          <div><dt>Retained sample</dt><dd>Sealed, dated and co-signed, held 24 months, available for third-party comparison.</dd></div>
-          <div><dt>Terms</dt><dd>Incoterm, lead time, payment terms and the arbitration seat, stated on one page.</dd></div>
+        <ul class="spec-grid" role="list">
+          <li class="spec-card"><span class="spec-shape" aria-hidden="true"></span><span class="spec-txt"><b>Lot code</b>Farm, cultivar, year, sequence. Printed on every carton, quoted on every invoice.</span></li>
+          <li class="spec-card"><span class="spec-shape" aria-hidden="true"></span><span class="spec-txt"><b>Product standard</b>GB/T 30357.4-2015 for shuixian, official English title cited.</span></li>
+          <li class="spec-card"><span class="spec-shape" aria-hidden="true"></span><span class="spec-txt"><b>Process record</b>Oxidation percent, roast level and date, resting period, moisture at packing.</span></li>
+          <li class="spec-card"><span class="spec-shape" aria-hidden="true"></span><span class="spec-txt"><b>Physical analysis</b>Stem, broken leaf, fannings and dust percent, leaf uniformity.</span></li>
+          <li class="spec-card"><span class="spec-shape" aria-hidden="true"></span><span class="spec-txt"><b>Residue panel</b>Multi-residue screen against EU MRLs, issued against the lot number.</span></li>
+          <li class="spec-card"><span class="spec-shape" aria-hidden="true"></span><span class="spec-txt"><b>Export filings</b>Producer and plantation registrations held with Chinese customs.</span></li>
+          <li class="spec-card"><span class="spec-shape" aria-hidden="true"></span><span class="spec-txt"><b>Retained sample</b>Sealed, dated, co-signed, held 24 months for third-party comparison.</span></li>
+          <li class="spec-card"><span class="spec-shape" aria-hidden="true"></span><span class="spec-txt"><b>Terms</b>Incoterm, lead time, payment terms and arbitration seat on one page.</span></li>
+        </ul>
+      </section>
+
+      <!-- THREE LINES OF BUSINESS -->
+      <section class="rule-top" data-lot="ZP-SX-2026-02">
+        <div class="sec-hd">
+          <h2>Three ways to buy the same leaf.</h2>
+          <p class="lede">One farm, one harvest calendar, three commercial formats. Pick the one that matches how you sell.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICE LADDER -->
-  <section class="rule-top">
-    <div class="wrap">
-      <div class="sec-hd">
-        <h2>The price ladder.</h2>
-        <p class="lede">Indicative figures for spring 2026 shuixian, ex-warehouse Hong Kong. Confirmed on quotation, per lot, before anything is packed.</p>
-      </div>
-      <div class="tbl-wrap">
-        <table>
-          <caption>Wholesale leaf, single lot, per kilogram</caption>
-          <thead>
-            <tr><th scope="col">Volume</th><th scope="col">Per kg</th><th scope="col">Per 100 g pack equivalent</th><th scope="col">Typical buyer</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>10 to 49 kg</td><td class="num">USD 52</td><td class="num">USD 5.20</td><td>Specialty retailer, tasting bar</td></tr>
-            <tr><td>50 to 199 kg</td><td class="num">USD 48</td><td class="num">USD 4.80</td><td>Online brand, gift packer</td></tr>
-            <tr><td>200 to 499 kg</td><td class="num">USD 45</td><td class="num">USD 4.50</td><td>Private label packer, distributor</td></tr>
-            <tr><td>500 kg and above</td><td class="num muted">On request</td><td class="num muted">On request</td><td>Beverage manufacturer, blender</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="callout">
-        <div class="callout-fig"><b>3.15 USD</b><span>Cost of a 50 g tin at the 200 kg tier, tin and packing included</span></div>
-        <p class="callout-txt">The same tin retails at 11 to 18 USD in Amsterdam, London and Toronto, which is where single-origin oolong actually sits on shelf. Ask for the tier you expect to buy at and the exact per unit figure.</p>
-        <a class="btn" href="contact.html">Quote this tier</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPLIANCE -->
-  <section class="band rule-top">
-    <div class="wrap">
-      <div class="sec-hd">
-        <h2>Built to clear a European buyer's first five questions.</h2>
-        <p class="lede">Most China-direct oolong fails on paperwork before anyone cups it. These are the five things we can answer in one email.</p>
-      </div>
-      <ul class="checks">
-        <li><span class="n">01</span><span><b>Can you export legally from China?</b> Producer and raw-material plantation registrations held with the customs authority. Copies go out with the lot pack.</span></li>
-        <li><span class="n">02</span><span><b>Will the tea be the same in twelve months?</b> Fixed cultivar, fixed pick window, fixed oxidation target, fixed roast curve. Same recipe, next season.</span></li>
-        <li><span class="n">03</span><span><b>Is the residue result repeatable?</b> Tested per lot, not once for marketing. The report carries the lot number.</span></li>
-        <li><span class="n">04</span><span><b>Can a buyer enforce a contract?</b> Hong Kong arbitration, English law on the sale, named seat in the terms.</span></li>
-        <li><span class="n">05</span><span><b>Will bulk match the sample?</b> A sealed reference sample per lot, co-signed and held, is the only answer that survives a dispute.</span></li>
-      </ul>
-      <div class="duo">
-        <div class="aside-box">
-          <h3>Who this suits</h3>
-          <p class="small">Specialty retailers and online tea brands buying 10 to 50 kg. EU and UK private label packers running 500 to 1,000 unit batches. Beverage and bubble tea manufacturers trialling 300 kg or more. Re-export traders who need documentation they can repeat to their own customers.</p>
-        </div>
-        <div class="aside-box">
-          <h3>Who this does not suit</h3>
-          <p class="small">Buyers looking for a container of blended commodity oolong at spot price. We sell one origin, in lots we can document, and we would rather lose the order than quote a lot we cannot stand behind twice.</p>
-        </div>
-      </div>
-      <p style="margin-top:2rem"><a class="link" href="quality.html">Read the full quality and compliance page</a></p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section>
-    <div class="wrap">
-      <div class="sec-hd">
-        <h2>Questions buyers ask first.</h2>
-      </div>
-      <div class="faq">
-        <div class="qa"><h3>What is the minimum order?</h3><p class="a">Ten kilograms for wholesale leaf. Five hundred units for a private label run in our stock tin. Custom printed tins carry a 3,000 unit minimum, which is the printer's run length, not ours.</p></div>
-        <div class="qa"><h3>Can you supply a lot-matched residue report?</h3><p class="a">Yes. Every lot offered for EU or UK sale is screened against a multi-residue panel before it is packed, and the report is issued against that lot number rather than against the farm in general.</p></div>
-        <div class="qa"><h3>Do you ship to the EU and the UK?</h3><p class="a">Yes. Oolong enters the EU at zero percent most-favoured-nation duty under heading 0902. We ship FOB Xiamen or delivered duty paid to an EU or UK warehouse, and we can name an importer of record so your label carries a European food business address.</p></div>
-        <div class="qa"><h3>How do I taste before committing?</h3><p class="a">A kit of five 20 gram lots goes out by courier with the spec sheet and residue report for each. It is charged at cost and refunded against your first order. Brew it the way your customer will brew it, not the way we do.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="band rule-top">
-    <div class="wrap cta">
-      <div>
-        <h2>Start with five samples and a price.</h2>
-        <p class="lede" style="margin-top:1rem">Tell us your market and your expected first order. We reply within one business day with a lot recommendation, a per kilogram price and the paperwork attached.</p>
-        <p class="small muted" style="margin-top:1.5rem">Prefer email: <a href="mailto:trade@originoolong.com">trade@originoolong.com</a></p>
-      </div>
-      <form class="form" action="contact.html" method="get" aria-label="Sample request">
-        <div class="form-grid">
-          <div class="field full">
-            <label for="h-company">Company <span class="req">*</span></label>
-            <input id="h-company" name="company" type="text" autocomplete="organization" required>
+        <div class="bento bento-3">
+          <div class="cell cell-a">
+            <span class="figure">10 kg<span>Entry point for wholesale leaf</span></span>
+            <h3>Wholesale leaf</h3>
+            <p>Sealed 5 kg foil-lined cartons of a single lot, with the spec sheet, the residue panel and a retained reference sample. Reorder against the same lot code so your blend does not move.</p>
+            <ul class="list">
+              <li>Tiered pricing from 10 kg to full pallet</li>
+              <li>Reference sample held for 24 months</li>
+              <li>FOB Xiamen or delivered to your warehouse</li>
+            </ul>
+            <dl class="mini">
+              <dt>Lead time</dt><dd>3 to 4 weeks from lot reservation</dd>
+              <dt>Packing</dt><dd>5 kg foil-lined carton</dd>
+              <dt>Payment</dt><dd>50 percent with order, balance against documents</dd>
+              <dt>Incoterm</dt><dd>FOB Xiamen, CIF on request</dd>
+            </dl>
+            <a class="link" href="wholesale.html">Wholesale terms</a>
           </div>
-          <div class="field">
-            <label for="h-email">Work email <span class="req">*</span></label>
-            <input id="h-email" name="email" type="email" autocomplete="email" required>
+          <div class="cell cell-tint">
+            <span class="figure">500<span>Units per private label run</span></span>
+            <h3>Private label</h3>
+            <p>Your artwork, your barcode, your market's label law. We handle the EU and UK label pack, including the importer block.</p>
+            <a class="link" href="private-label.html">Private label programme</a>
           </div>
-          <div class="field">
-            <label for="h-market">Market</label>
-            <select id="h-market" name="market">
-              <option value="" selected disabled>Select a market</option>
-              <option>European Union</option>
-              <option>United Kingdom</option>
-              <option>Hong Kong</option>
-              <option>Singapore</option>
-              <option>Gulf and Middle East</option>
-              <option>North America</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field full">
-            <label for="h-volume">Expected first order</label>
-            <select id="h-volume" name="volume">
-              <option value="" selected disabled>Select a volume</option>
-              <option>10 to 49 kg leaf</option>
-              <option>50 to 199 kg leaf</option>
-              <option>200 kg and above</option>
-              <option>500 to 1,000 units private label</option>
-              <option>Sample kit only for now</option>
-            </select>
+          <div class="cell">
+            <span class="figure">Vintage<span>Aged lots, held in bond-free storage</span></span>
+            <h3>Aged and vintage lots</h3>
+            <p>Roasted oolong improves with rest. We hold small parcels from earlier seasons and release them by year, with the original lot sheet attached.</p>
+            <a class="link" href="oolong.html">See the range</a>
           </div>
         </div>
-        <div class="form-ft">
-          <button class="btn" type="submit">Request samples</button>
-          <span class="small">One business day reply. No list, no newsletter. We use your details to answer this enquiry only.</span>
+      </section>
+
+      <!-- PRICE LADDER -->
+      <section class="rule-top" data-lot="ZP-SX-2026-03">
+        <div class="sec-hd">
+          <h2>The price ladder.</h2>
+          <p class="lede">Indicative figures for spring 2026 shuixian, ex-warehouse Hong Kong. Confirmed on quotation, per lot, before anything is packed.</p>
         </div>
-      </form>
-    </div>
-  </section>
+        <div class="tbl-wrap">
+          <table>
+            <caption>Wholesale leaf, single lot, per kilogram</caption>
+            <thead>
+              <tr><th scope="col">Volume</th><th scope="col">Per kg</th><th scope="col">Per 100 g pack equivalent</th><th scope="col">Typical buyer</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>10 to 49 kg</td><td class="num">USD 52</td><td class="num">USD 5.20</td><td>Specialty retailer, tasting bar</td></tr>
+              <tr><td>50 to 199 kg</td><td class="num">USD 48</td><td class="num">USD 4.80</td><td>Online brand, gift packer</td></tr>
+              <tr><td>200 to 499 kg</td><td class="num">USD 45</td><td class="num">USD 4.50</td><td>Private label packer, distributor</td></tr>
+              <tr><td>500 kg and above</td><td class="num muted">On request</td><td class="num muted">On request</td><td>Beverage manufacturer, blender</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <div class="callout-fig"><b>3.15 USD</b><span>Cost of a 50 g tin at the 200 kg tier, tin and packing included</span></div>
+          <p class="callout-txt">The same tin retails at 11 to 18 USD in Amsterdam, London and Toronto, which is where single-origin oolong actually sits on shelf. Ask for the tier you expect to buy at and the exact per unit figure.</p>
+          <a class="btn" href="contact.html">Quote this tier</a>
+        </div>
+      </section>
+
+      <!-- FIVE BUYER QUESTIONS: morphing accordion -->
+      <section class="band rule-top" data-lot="ZP-SX-2026-04">
+        <div class="sec-hd">
+          <h2>Built to clear a European buyer's first five questions.</h2>
+          <p class="lede">Most China-direct oolong fails on paperwork before anyone cups it. These are the five things we can answer in one email.</p>
+        </div>
+        <ul class="qa-morph" role="list">
+          <li>
+            <button class="qa-q" type="button" aria-expanded="false" aria-controls="qa-a1" id="qa-q1">
+              <span class="qa-n">01</span>
+              <span class="qa-t">Can you export legally from China?</span>
+              <span class="qa-bar" aria-hidden="true"></span>
+            </button>
+            <div class="qa-a" id="qa-a1" role="region" aria-labelledby="qa-q1">
+              <p>Producer and raw-material plantation registrations held with the customs authority. Copies go out with the lot pack.</p>
+            </div>
+          </li>
+          <li>
+            <button class="qa-q" type="button" aria-expanded="false" aria-controls="qa-a2" id="qa-q2">
+              <span class="qa-n">02</span>
+              <span class="qa-t">Will the tea be the same in twelve months?</span>
+              <span class="qa-bar" aria-hidden="true"></span>
+            </button>
+            <div class="qa-a" id="qa-a2" role="region" aria-labelledby="qa-q2">
+              <p>Fixed cultivar, fixed pick window, fixed oxidation target, fixed roast curve. Same recipe, next season.</p>
+            </div>
+          </li>
+          <li>
+            <button class="qa-q" type="button" aria-expanded="false" aria-controls="qa-a3" id="qa-q3">
+              <span class="qa-n">03</span>
+              <span class="qa-t">Is the residue result repeatable?</span>
+              <span class="qa-bar" aria-hidden="true"></span>
+            </button>
+            <div class="qa-a" id="qa-a3" role="region" aria-labelledby="qa-q3">
+              <p>Tested per lot, not once for marketing. The report carries the lot number.</p>
+            </div>
+          </li>
+          <li>
+            <button class="qa-q" type="button" aria-expanded="false" aria-controls="qa-a4" id="qa-q4">
+              <span class="qa-n">04</span>
+              <span class="qa-t">Can a buyer enforce a contract?</span>
+              <span class="qa-bar" aria-hidden="true"></span>
+            </button>
+            <div class="qa-a" id="qa-a4" role="region" aria-labelledby="qa-q4">
+              <p>Hong Kong arbitration, English law on the sale, named seat in the terms.</p>
+            </div>
+          </li>
+          <li>
+            <button class="qa-q" type="button" aria-expanded="false" aria-controls="qa-a5" id="qa-q5">
+              <span class="qa-n">05</span>
+              <span class="qa-t">Will bulk match the sample?</span>
+              <span class="qa-bar" aria-hidden="true"></span>
+            </button>
+            <div class="qa-a" id="qa-a5" role="region" aria-labelledby="qa-q5">
+              <p>A sealed reference sample per lot, co-signed and held, is the only answer that survives a dispute.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="duo">
+          <div class="aside-box">
+            <h3>Who this suits</h3>
+            <p class="small">Specialty retailers and online tea brands buying 10 to 50 kg. EU and UK private label packers running 500 to 1,000 unit batches. Beverage and bubble tea manufacturers trialling 300 kg or more. Re-export traders who need documentation they can repeat to their own customers.</p>
+          </div>
+          <div class="aside-box">
+            <h3>Who this does not suit</h3>
+            <p class="small">Buyers looking for a container of blended commodity oolong at spot price. We sell one origin, in lots we can document, and we would rather lose the order than quote a lot we cannot stand behind twice.</p>
+          </div>
+        </div>
+        <p style="margin-top:2rem"><a class="link" href="quality.html">Read the full quality and compliance page</a></p>
+      </section>
+
+      <!-- FAQ -->
+      <section data-lot="ZP-SX-2026-05">
+        <div class="sec-hd">
+          <h2>Questions buyers ask first.</h2>
+        </div>
+        <div class="faq">
+          <div class="qa"><h3>What is the minimum order?</h3><p class="a">Ten kilograms for wholesale leaf. Five hundred units for a private label run in our stock tin. Custom printed tins carry a 3,000 unit minimum, which is the printer's run length, not ours.</p></div>
+          <div class="qa"><h3>Can you supply a lot-matched residue report?</h3><p class="a">Yes. Every lot offered for EU or UK sale is screened against a multi-residue panel before it is packed, and the report is issued against that lot number rather than against the farm in general.</p></div>
+          <div class="qa"><h3>Do you ship to the EU and the UK?</h3><p class="a">Yes. Oolong enters the EU at zero percent most-favoured-nation duty under heading 0902. We ship FOB Xiamen or delivered duty paid to an EU or UK warehouse, and we can name an importer of record so your label carries a European food business address.</p></div>
+          <div class="qa"><h3>How do I taste before committing?</h3><p class="a">A kit of five 20 gram lots goes out by courier with the spec sheet and residue report for each. It is charged at cost and refunded against your first order. Brew it the way your customer will brew it, not the way we do.</p></div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="band rule-top" data-lot="ZP-SX-2026-06">
+        <div class="cta">
+          <div>
+            <h2>Start with five samples and a price.</h2>
+            <p class="lede" style="margin-top:1rem">Tell us your market and your expected first order. We reply within one business day with a lot recommendation, a per kilogram price and the paperwork attached.</p>
+            <p class="small muted" style="margin-top:1.5rem">Prefer email: <a href="mailto:trade@originoolong.com">trade@originoolong.com</a></p>
+          </div>
+          <form class="form" action="contact.html" method="get" aria-label="Sample request">
+            <div class="form-grid">
+              <div class="field full">
+                <label for="h-company">Company <span class="req">*</span></label>
+                <input id="h-company" name="company" type="text" autocomplete="organization" required>
+              </div>
+              <div class="field">
+                <label for="h-email">Work email <span class="req">*</span></label>
+                <input id="h-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="h-market">Market</label>
+                <select id="h-market" name="market">
+                  <option value="" selected disabled>Select a market</option>
+                  <option>European Union</option>
+                  <option>United Kingdom</option>
+                  <option>Hong Kong</option>
+                  <option>Singapore</option>
+                  <option>Gulf and Middle East</option>
+                  <option>North America</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="h-volume">Expected first order</label>
+                <select id="h-volume" name="volume">
+                  <option value="" selected disabled>Select a volume</option>
+                  <option>10 to 49 kg leaf</option>
+                  <option>50 to 199 kg leaf</option>
+                  <option>200 kg and above</option>
+                  <option>500 to 1,000 units private label</option>
+                  <option>Sample kit only for now</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-ft">
+              <button class="btn" type="submit">Request samples</button>
+              <span class="small">One business day reply. No list, no newsletter. We use your details to answer this enquiry only.</span>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </div><!-- /page-main -->
+  </div><!-- /page-rail-wrap -->
 
 </main>
 
@@ -349,7 +390,7 @@
           </svg>
           <span class="brand-txt">Origin Oolong<span>LLC / Hong Kong</span></span>
         </a>
-        <p class="small muted" style="margin-top:1.1rem;max-width:32ch">Hong Kong based buyer and exporter. Fujian supply, European paperwork..</p>
+        <p class="small muted" style="margin-top:1.1rem;max-width:32ch">Hong Kong based buyer and exporter. Fujian supply, European paperwork.</p>
       </div>
       <div>
         <h4>Trade</h4>
@@ -389,12 +430,36 @@
 (function () {
   var hdr = document.getElementById('hdr');
   var btn = document.getElementById('navToggle');
-  if (!btn) return;
-  btn.addEventListener('click', function () {
-    var open = hdr.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var open = hdr.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+  }
+
+  // Morphing accordion: pure CSS grid-template-rows transition; JS only toggles state.
+  document.querySelectorAll('.qa-q').forEach(function (q) {
+    q.addEventListener('click', function () {
+      var open = q.getAttribute('aria-expanded') === 'true';
+      q.setAttribute('aria-expanded', String(!open));
+    });
   });
+
+  // Sticky lot rail: one IntersectionObserver over ~6 targets. State is a CSS
+  // custom property only; the code text is rendered by ::before, so no DOM or
+  // layout work happens in the handler.
+  var root = document.documentElement;
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          root.style.setProperty('--rail-code', '"' + e.target.getAttribute('data-lot') + '"');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    document.querySelectorAll('[data-lot]').forEach(function (s) { io.observe(s); });
+  }
 })();
 </script>
 </body>

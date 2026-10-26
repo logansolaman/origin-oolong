@@ -22,8 +22,9 @@
   --accent-soft: #F0E3CE;
 
   /* type */
-  --sans: "Geist", ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
-  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: "Archivo", ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --disp: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   /* geometry */
   --r: 3px;
@@ -159,6 +160,161 @@ section { padding-block: clamp(3rem, 6vw, 5.5rem); }
   }
   .hdr.open .nav a { padding-block: .7rem; width: 100%; border-bottom: 1px solid var(--hair); }
   .hdr.open .nav .btn { margin-top: .75rem; width: 100%; border-bottom: 0; }
+}
+
+/* ---------- hero: DOCUMENTED OOLONG OR NOTHING ---------- */
+
+.hero-cert { padding-block: clamp(2.25rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3.5rem); position: relative; }
+.hero-cert-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.hero-cert-title {
+  font-family: var(--disp);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 7.2vw, 5.4rem);
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-top: .9rem;
+}
+.hero-cert-copy .lede { margin-top: 1.4rem; max-width: 44ch; }
+.hero-cert-copy .hero-cta { margin-top: 1.8rem; }
+.hero-cert-visual { display: flex; align-items: center; justify-content: center; }
+.poly-spin {
+  display: block;
+  animation: polySpin 34s linear infinite;
+  will-change: transform;           /* own layer: rotation never repaints the vector */
+  contain: layout paint;
+}
+.polyhedron { display: block; width: min(100%, 380px); height: auto; color: var(--ink); }
+/* one-time draw-in: dash offset runs once on load, then the group is static */
+.poly-edge {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: polyDraw 1.5s cubic-bezier(.16, 1, .3, 1) forwards;
+}
+.poly-draw .poly-edge:nth-child(2) { animation-delay: .12s; }
+.poly-draw .poly-edge:nth-child(3) { animation-delay: .24s; }
+.poly-draw .poly-edge:nth-child(4) { animation-delay: .34s; }
+@keyframes polyDraw { to { stroke-dashoffset: 0; } }
+@keyframes polySpin { to { transform: rotate(360deg); } }
+@media (max-width: 860px) {
+  .hero-cert-grid { grid-template-columns: 1fr; }
+  .hero-cert-visual { order: -1; }
+  .polyhedron { width: min(58vw, 220px); }
+}
+
+/* ---------- page rail (sticky lot code) ---------- */
+
+.page-rail-wrap { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: clamp(1.5rem, 3vw, 2.5rem); align-items: start; }
+.page-rail {
+  position: sticky; top: 110px;
+  display: flex; flex-direction: column; align-items: center; gap: .8rem;
+  padding-block: .5rem;
+}
+.rail-label {
+  font-family: var(--mono); font-size: .625rem; letter-spacing: .18em;
+  color: var(--muted); writing-mode: vertical-rl; text-transform: uppercase;
+}
+.rail-code {
+  font-family: var(--mono); font-size: .75rem; letter-spacing: .1em;
+  color: var(--ink); writing-mode: vertical-rl; text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+/* text comes from a custom property, not the DOM: the observer writes one var */
+.rail-code::before { content: var(--rail-code, "ZP-SX-2026-01"); }
+.page-main { min-width: 0; }
+.page-main > section:first-of-type { padding-top: 0; }
+@media (max-width: 940px) {
+  .page-rail-wrap { grid-template-columns: 1fr; }
+  .page-rail {
+    position: sticky; top: 69px; z-index: 15;
+    flex-direction: row; justify-content: flex-start; gap: .75rem;
+    background: var(--paper); padding-block: .55rem;
+    border-bottom: 1px solid var(--hair);
+  }
+  .rail-code, .rail-label { writing-mode: horizontal-tb; }
+}
+
+/* ---------- morphing spec cards ---------- */
+
+.spec-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px; background: var(--hair); border: 1px solid var(--hair);
+}
+.spec-card {
+  position: relative; background: var(--card);
+  padding: 1.5rem 1.35rem 1.35rem;
+  min-height: 168px; display: flex; flex-direction: column; justify-content: flex-end;
+  overflow: hidden;
+}
+.spec-shape {
+  position: absolute; inset: 0; display: block;
+  background: var(--accent);
+  clip-path: polygon(0 0, 100% 0, 100% 3px, 0 3px);
+  transition: clip-path .38s cubic-bezier(.16, 1, .3, 1);
+  will-change: clip-path;
+}
+.spec-card:nth-child(2) .spec-shape { clip-path: polygon(0 0, 100% 0, 100% 3px, 0 3px); transform: skewX(-8deg); }
+.spec-card:nth-child(3) .spec-shape { clip-path: polygon(0 calc(100% - 3px), 100% calc(100% - 3px), 100% 100%, 0 100%); }
+.spec-card:nth-child(4) .spec-shape { clip-path: polygon(calc(100% - 3px) 0, 100% 0, 100% 100%, calc(100% - 3px) 100%); }
+.spec-card:nth-child(5) .spec-shape { clip-path: polygon(0 0, 3px 0, 3px 100%, 0 100%); }
+.spec-card:nth-child(6) .spec-shape { clip-path: polygon(0 0, 100% 0, 100% 3px, 0 3px); }
+.spec-card:nth-child(7) .spec-shape { clip-path: polygon(0 calc(100% - 3px), 100% calc(100% - 3px), 100% 100%, 0 100%); transform: skewX(8deg); }
+.spec-card:nth-child(8) .spec-shape { clip-path: polygon(calc(100% - 3px) 0, 100% 0, 100% 100%, calc(100% - 3px) 100%); }
+.spec-card:hover .spec-shape,
+.spec-card:focus-within .spec-shape {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: none;
+}
+.spec-txt { position: relative; z-index: 1; display: block; transition: color .22s ease .1s; }
+.spec-txt b {
+  display: block; font-family: var(--mono); font-size: .75rem;
+  letter-spacing: .08em; text-transform: uppercase; font-weight: 500;
+  color: var(--ink); margin-bottom: .55rem;
+}
+.spec-card .spec-txt { color: var(--body); font-size: .875rem; line-height: 1.5; }
+.spec-card:hover .spec-txt b,
+.spec-card:focus-within .spec-txt b { color: #FFF; }
+.spec-card:hover .spec-txt,
+.spec-card:focus-within .spec-txt { color: rgba(255,255,255,.92); }
+@media (max-width: 980px) { .spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) { .spec-grid { grid-template-columns: 1fr; } }
+
+/* ---------- morphing accordion (five buyer questions) ---------- */
+
+.qa-morph { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--hair); }
+.qa-morph li { border-bottom: 1px solid var(--hair); }
+.qa-q {
+  width: 100%; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr) 1.6rem;
+  gap: .5rem; align-items: center; padding: 1.05rem 0;
+  background: transparent; border: 0; cursor: pointer; text-align: left;
+  font-family: var(--sans);
+}
+.qa-n { font-family: var(--mono); font-size: .75rem; color: var(--accent); }
+.qa-t { font-size: 1.0625rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+.qa-bar {
+  display: block; width: 18px; height: 3px; background: var(--accent);
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  transform: rotate(0deg);
+  transition: clip-path .3s cubic-bezier(.16, 1, .3, 1), transform .3s cubic-bezier(.16, 1, .3, 1);
+  justify-self: end;
+}
+.qa-q[aria-expanded="true"] .qa-bar {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: rotate(0deg);
+}
+.qa-a {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows .38s cubic-bezier(.16, 1, .3, 1);
+}
+.qa-a > p { overflow: hidden; margin: 0; font-size: .9375rem; color: var(--body); max-width: 68ch; padding-left: 2.9rem; }
+.qa-q[aria-expanded="true"] + .qa-a { grid-template-rows: 1fr; }
+.qa-q[aria-expanded="true"] + .qa-a > p { padding-bottom: 1.2rem; }
+@media (prefers-reduced-motion: reduce) {
+  .spec-shape, .qa-bar, .qa-a, .spec-txt { transition: none !important; }
+  .polyhedron .poly-draw { animation: none !important; }
 }
 
 /* ---------- hero ---------- */
