@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">
 {
@@ -74,14 +74,16 @@
 
 <header class="hdr" id="hdr">
   <div class="wrap hdr-in">
-    <a class="brand" href="index.html" aria-label="Origin Oolong LLC home">
-      <svg class="brand-mark" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-        <rect x="0.6" y="0.6" width="24.8" height="24.8" rx="2" stroke="currentColor" stroke-width="1.2"/>
-        <path d="M6 19c0-6.6 4.4-11 11-11" stroke="currentColor" stroke-width="1.2"/>
-        <path d="M6 19c6.6 0 11-4.4 11-11" stroke="currentColor" stroke-width="1.2" opacity=".45"/>
-        <circle cx="19.6" cy="6.4" r="1.5" fill="currentColor"/>
+    <a class="brand" href="index.html" aria-label="Origin Oolong Trading, home">
+      <svg class="brand-mark" viewBox="0 0 46 26" fill="none" aria-hidden="true">
+        <g stroke="currentColor">
+          <circle cx="14.2" cy="13" r="10.6" stroke-width="1.9"/>
+          <circle cx="14.2" cy="13" r="7.9" stroke-width=".8" opacity=".6"/>
+          <circle cx="31.8" cy="13" r="10.6" stroke-width="1.9"/>
+          <circle cx="31.8" cy="13" r="7.9" stroke-width=".8" opacity=".6"/>
+        </g>
       </svg>
-      <span class="brand-txt">Origin Oolong<span>LLC / Hong Kong</span></span>
+      <span class="brand-txt">Origin Oolong<span>Trading / Hong Kong</span></span>
     </a>
     <nav class="nav" id="nav" aria-label="Primary">
       <a href="wholesale.html">Wholesale</a>
@@ -99,38 +101,29 @@
 
 <main>
 
-  <!-- HERO: DOCUMENTED OOLONG OR NOTHING -->
-  <section class="hero-cert">
-    <div class="wrap hero-cert-grid">
-      <div class="hero-cert-copy">
-        <p class="kicker">Oolong trade, one origin</p>
-        <h1 class="hero-cert-title">Documented<br>Oolong<br>Or Nothing</h1>
-        <p class="lede">Zhangping shuixian grown, made and packed under a named tea master. Wholesale leaf, private label and aged lots, shipped from Hong Kong.</p>
-        <div class="hero-cta">
-          <a class="btn" href="contact.html">Request a sample kit</a>
-          <a class="btn btn-ghost" href="wholesale.html">See the price ladder</a>
-        </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <svg class="hero-seal" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <circle cx="40" cy="40" r="34" stroke="currentColor" stroke-width="6"/>
+        <circle cx="40" cy="40" r="26.5" stroke="currentColor" stroke-width="1.2" opacity=".8"/>
+        <circle cx="32" cy="40" r="10.4" stroke="currentColor" stroke-width="4"/>
+        <circle cx="48" cy="40" r="10.4" stroke="currentColor" stroke-width="4"/>
+      </svg>
+      <p class="hero-kicker">Grand Cru &middot; Single Origin Oolong</p>
+      <h1 class="hero-title">Documented Oolong Or Nothing</h1>
+      <p class="hero-sub">Zhangping shuixian grown, made and packed under a named tea master. Wholesale leaf, private label and aged lots, shipped from Hong Kong.</p>
+      <div class="hero-cta">
+        <a class="btn btn-light" href="contact.html">Request a sample kit</a>
+        <a class="btn btn-outline-light" href="wholesale.html">See the price ladder</a>
       </div>
-      <div class="hero-cert-visual" aria-hidden="true">
-        <div class="poly-spin">
-        <svg class="polyhedron" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g class="poly-draw">
-            <path class="poly-edge" d="M160 32 L268 108 L236 248 L84 248 L52 108 Z" stroke="currentColor" stroke-width="1.4"/>
-            <path class="poly-edge" d="M160 32 L160 140 M52 108 L160 140 M268 108 L160 140 M84 248 L160 140 M236 248 L160 140" stroke="currentColor" stroke-width="1" opacity=".5"/>
-            <path class="poly-edge" d="M160 140 L236 248 M160 140 L84 248" stroke="currentColor" stroke-width="1" opacity=".35"/>
-            <path class="poly-edge" d="M52 108 L236 248 M268 108 L84 248" stroke="currentColor" stroke-width=".9" opacity=".28"/>
-            <circle cx="160" cy="32" r="3.5" fill="currentColor"/>
-            <circle cx="52" cy="108" r="3" fill="currentColor" opacity=".7"/>
-            <circle cx="268" cy="108" r="3" fill="currentColor" opacity=".7"/>
-            <circle cx="84" cy="248" r="3" fill="currentColor" opacity=".7"/>
-            <circle cx="236" cy="248" r="3" fill="currentColor" opacity=".7"/>
-            <circle cx="160" cy="140" r="3.2" fill="var(--accent)"/>
-          </g>
-        </svg>
-        </div>
-      </div>
+      <dl class="hero-data">
+        <div><dt>Lot</dt><dd>ZP-SX-2026-01</dd></div>
+        <div><dt>Oxidation</dt><dd>28 percent</dd></div>
+        <div><dt>Process</dt><dd>Light roast, no charcoal</dd></div>
+        <div><dt>Origin</dt><dd>Zhangping, Fujian</dd></div>
+      </dl>
     </div>
-    <!-- rotating wireframe lives on GPU layer, no JS -->
   </section>
 
   <!-- STICKY RAIL + CONTENT WRAPPER -->
@@ -157,7 +150,7 @@
         <div class="sec-hd">
           <p class="kicker">Documentation</p>
           <h2>The lot pack, in eight certificates.</h2>
-          <p class="lede">Oolong has no commodity benchmark. A buyer cannot check a price against an index, so the only thing that makes it a reorderable SKU is the paperwork. Hover a card to see the spec it certifies.</p>
+          <p class="lede">Oolong has no commodity benchmark. A buyer cannot check a price against an index, so the only thing that makes it a reorderable SKU is the paperwork. Each card names the document and the spec it certifies.</p>
         </div>
         <ul class="spec-grid" role="list">
           <li class="spec-card"><span class="spec-shape" aria-hidden="true"></span><span class="spec-txt"><b>Lot code</b>Farm, cultivar, year, sequence. Printed on every carton, quoted on every invoice.</span></li>
@@ -210,6 +203,52 @@
         </div>
       </section>
 
+      <!-- TEA INDEX AND SPECIFICATIONS -->
+      <section class="rule-top">
+        <div class="sec-hd">
+          <p class="kicker">Index</p>
+          <h2>Tea index and specifications.</h2>
+          <p class="lede">Four expressions of one cultivar from one village. Oxidation is stated as it came out of the drum, not as it was planned on the sheet.</p>
+        </div>
+        <div class="tbl-wrap">
+          <table class="index-tbl">
+            <caption>Range index, 2026 offer. Per-lot price sits on the ladder below.</caption>
+            <thead>
+              <tr>
+                <th scope="col">House name</th><th scope="col">True name</th><th scope="col">Oxidation</th>
+                <th scope="col">Process</th><th scope="col">Season</th><th scope="col">Sheet</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="house">Orchid Hollow</td>
+                <td class="true-name">Zhangping Shuixian 漳平水仙</td>
+                <td class="num">28%</td><td>Light roast, no charcoal</td><td>Spring</td>
+                <td><a class="doclink" href="oolong.html">Spec</a></td>
+              </tr>
+              <tr>
+                <td class="house">Amber Ledger</td>
+                <td class="true-name">Zhangping Shuixian</td>
+                <td class="num">32%</td><td>Charcoal, rested 90 days</td><td>Spring</td>
+                <td><a class="doclink" href="oolong.html">Spec</a></td>
+              </tr>
+              <tr>
+                <td class="house">Winter Pick</td>
+                <td class="true-name">Zhangping Shuixian 冬片</td>
+                <td class="num">25%</td><td>Light roast, low yield</td><td>December pluck</td>
+                <td><a class="doclink" href="oolong.html">Spec</a></td>
+              </tr>
+              <tr>
+                <td class="house">Archive 2021</td>
+                <td class="true-name">Zhangping Shuixian 陈茶</td>
+                <td class="num">On sheet</td><td>Re-roasted 2023</td><td>Held in Hong Kong</td>
+                <td><a class="doclink" href="oolong.html">Spec</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <!-- PRICE LADDER -->
       <section class="rule-top" data-lot="ZP-SX-2026-03">
         <div class="sec-hd">
@@ -234,6 +273,31 @@
           <div class="callout-fig"><b>3.15 USD</b><span>Cost of a 50 g tin at the 200 kg tier, tin and packing included</span></div>
           <p class="callout-txt">The same tin retails at 11 to 18 USD in Amsterdam, London and Toronto, which is where single-origin oolong actually sits on shelf. Ask for the tier you expect to buy at and the exact per unit figure.</p>
           <a class="btn" href="contact.html">Quote this tier</a>
+        </div>
+      </section>
+
+      <!-- THE PLACE -->
+      <section class="band rule-top">
+        <div class="wrap philo">
+          <div>
+            <p class="kicker">Provenance</p>
+            <h2 style="margin-top:.75rem">The place, and why the lots are small.</h2>
+            <p style="margin-top:1.25rem">Zhangping sits inland in Fujian, in Longyan prefecture, around 113 kilometres from Xiamen. It is not on the standard oolong map that begins with Wuyi and ends with the Taiwanese high mountains. That omission is the opportunity: no incumbent owns the name in English, and the tea is good enough to be compared with both.</p>
+            <p>Yongfu, the town we buy from, is a valley of small holdings rather than one estate, which is why lot level documentation matters more here than a farm certificate.</p>
+            <a class="btn btn-ghost" href="about.html" style="margin-top:.75rem">Read the origin note</a>
+          </div>
+          <div class="philo-note">
+            <p class="small muted" style="margin-bottom:1.25rem">The terms we trade on, stated plainly.</p>
+            <dl class="spec-rows">
+              <div><dt>Village</dt><dd>Yongfu, Zhangping</dd></div>
+              <div><dt>Prefecture</dt><dd>Longyan, Fujian</dd></div>
+              <div><dt>Cultivar</dt><dd>Shuixian 水仙</dd></div>
+              <div><dt>Making</dt><dd>Hand, daily</dd></div>
+              <div><dt>Position</dt><dd>Title taken before shipping</dd></div>
+              <div><dt>Desk</dt><dd>Hong Kong</dd></div>
+            </dl>
+            <p class="small muted" style="margin-top:1.25rem">One lot number follows the leaf from the picking record to the retained sample.</p>
+          </div>
         </div>
       </section>
 

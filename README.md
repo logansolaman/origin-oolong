@@ -66,4 +66,10 @@ No path changes are needed: the site uses relative links throughout, so it works
 
 ## Design
 
-Paper `#F1F2EE`, ink `#0F1210`, body `#333A34`, accent `#8F520C`. Geist for display, Geist Mono for all figures, loaded from Google Fonts. One light theme, hairlines instead of cards, no images.
+Aligned to the Origin Oolong | Grand Cru identity sheet.
+
+- *Stark Parchment* `#F3F0E8` page, *Oxidation Black* `#0B0B0B` ink and hero ground, *Alluvial Gray* `#C8CAC9` hairlines, *Clay Terracotta* `#B86B4A` for marks, rules and display accents.
+- Small terracotta text uses `#7A4025` (`--accent-text`) because `#B86B4A` is only 3.5:1 on parchment; the brand tone survives, the contrast budget does not. Every text token measures 7:1 or better.
+- Type: Bodoni Moda (display serif, standing in for Rugiet, which is a commercial licence) + IBM Plex Mono (labels, lot codes, figures) + the system Helvetica Neue stack for body copy. Two webfonts, `font-display: swap`, Latin subset.
+- Structure per the sheet: circular OO medallion lockup, square corners only (`--r: 0`), hairline rules instead of shadows, dark hero band with a contour-line field and a copper seal, then the parchment certificate system.
+- Copy is the existing site copy. The Grand Cru sheet's placeholder numbers (FIT-098, 1850 m, Puru China) are not used anywhere; every batch figure on the site is one of the site's own lot codes.
